@@ -1,0 +1,32 @@
+<?php
+/*if (!isset($_SESSION['usuario-logado'])) {
+    
+	die();
+}*/
+?>
+<html>
+<head>
+	<title>Minha Loja</title>
+	<meta charset="UTF-8">
+	<link href="http://<?= $_SERVER['SERVER_NAME'] ?>/loja/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://<?= $_SERVER['SERVER_NAME'] ?>/loja/css/loja.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
+  <a class="navbar-brand" href="./index.php">Home</a>
+  <button class="navbar-toggler" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <?php if (isset($usuario) && $usuario): ?>
+      <a class="nav-item nav-link table-color" href="./cadastrar-produto.php">Adicionar Produtos</a>
+      <a class="nav-item nav-link" href="./lista-produtos.php">Listar Produtos</a>
+      <a class="nav-item nav-link" href="./contato.php">Contato</a>
+      <a class="nav-item nav-link" href="http://<?= $_SERVER['SERVER_NAME'] ?>/loja/deslogar.php">Deslogar</a>
+      <?php endif ?>
+    </div>
+  </div>
+</nav>
+    <div class="container">
+        <div class="principal">

@@ -1,0 +1,8 @@
+<?php require('cabecalho.php') ?>
+<?php if ($removeu_produto): ?>
+<p class='alert-success'>Produto <?= $id ?> removido com sucesso.</p>
+<?php else: ?>
+<p class='alert-danger'>Produto <?= $id ?> não foi removido.</p>
+<?php endif ?>
+<?php require_once('rodape.php') ?>
+

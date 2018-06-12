@@ -1,0 +1,12 @@
+body{
+	padding-top: 0px;
+}
+
+.principal{
+	padding: 40px 15px;
+	text-align: center;
+	min-height: 400px;
+}
+.descricao{
+margin-right: 30px;
+}
