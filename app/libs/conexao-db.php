@@ -1,8 +1,8 @@
 <?php
 
 
-$dsn = 'mysql:host=localhost;port=3306;dbname=Produtos;charset=utf8';
-$usuario = 'joao.batista';
+$dsn = 'mysql:host=localhost;port=3306;dbname=meu-banco;charset=utf8';
+$usuario = 'meu-usuario';
 $senha = '';
 
 try {
