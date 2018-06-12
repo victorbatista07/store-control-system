@@ -1,0 +1,16 @@
+<?php require_once(__DIR__ . "/cabecalho.phtml")?>
+<?php require_once (__DIR__ . "/../../public/valida-acesso.php") ?>
+//require("validaAcesso.php");
+
+<?php validaAcesso($_SESSION['usuario-logado']) ?>
+
+
+
+<?php if ($inseriu_produto): ?>
+<p class="alert-success">Produto <?= $nome; ?>, <?= $preco; ?> adicionado com sucesso!<br>
+Valor de R$<?php echo $preco ?>!</p>
+<a href="lista-produtos.php">Ver lista com todos os produtos cadastrados</a>
+<?php else: ?>
+<p class='text-danger'> O produto <?= $nome ?> não foi cadastrado. </p>
+<?php endif ?>
+<?php require_once(__DIR__ . '/rodape.phtml') ?>

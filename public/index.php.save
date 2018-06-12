@@ -1,0 +1,11 @@
+<?php
+session_start();
+
+if (isset($_SESSION['usuario-logado'])) {
+    $usuario = $_SESSION['usuario-logado'];
+    include(__DIR__ . '/../app/templates/index.phtml');
+} else {
+	echo $_SESSION['falha-no-login'];
+    include(__DIR__ . '/../app/templates/logar.phtml');
+	
+}
